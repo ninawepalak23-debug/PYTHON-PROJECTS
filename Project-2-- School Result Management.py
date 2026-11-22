@@ -93,8 +93,10 @@ print("=========================================")
 print("                  SEARCH STUDENT RECORDS")
 print("=========================================")
 x=int(input("Enter Admission Number: "))
+found=False
 for i in range(len(students)):
       if students[i]["Admission Number"] == x:
+            found=True
             print("\nStudent Record Found!")
             print("---------------------------------------------")
             print("Admission Number:", students[i]["Admission Number"])
@@ -105,6 +107,6 @@ for i in range(len(students)):
             print("Theory Marks:", students[i]["Theory Marks"])
             print("Practical Marks:", students[i]["Practical Marks"])
             print("---------------------------------------------")
-      else:
-            print("Student not found!")
+if found==False:
+      print("Student not found!")
 
